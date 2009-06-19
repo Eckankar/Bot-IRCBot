@@ -1,5 +1,4 @@
-#!/usr/bin/env perl
-package IRCBot;
+package Bot::IRCBot;
 use Moose;
 use YAML 'LoadFile';
 
