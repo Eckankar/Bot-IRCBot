@@ -15,7 +15,17 @@ sub said {
     $self = shift;
     $args = shift;
 
-    assert();
+    my ($user, $body, $channel) =
+            ($args->{who}, $args->{body}, $args->{channel});
+
+    assert($self->loaded);
+
+    return undef
+        unless $body =~ /youtube\.\w{2,3}\S+v=([\w-]+)/;
+
+    my $videoid = $1;
+
+    return "Matched YouTube link; video id: $videoid"
 }
 1;
 
