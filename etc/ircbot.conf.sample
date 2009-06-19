@@ -5,11 +5,14 @@ server:     irc.freenode.org
 port:       6667
 
 # Channels to join
-channels: [ #ircbot-default ]
+channels: [ "#ircbot-default" ]
 
 # Nicks to use
 nick:       Bot-IRCBot
-alt_nicks:  [ Bot-IRCBotA, Bot-IRCBotB, Bot-IRCBotC ]
+alt_nicks:  [ "Bot-IRCBotA", "Bot-IRCBotB", "Bot-IRCBotC" ]
+
+# Loaded plugins
+plugins:    [ "YouTube" ]
 
 # Misc. stuff
 charset:    utf-8
