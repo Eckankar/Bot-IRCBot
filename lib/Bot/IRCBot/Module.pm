@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package Bot::IRCBot::Module;
 use Moose;
+use Carp::Assert;
 
 has 'name' => (
     is      => 'r',
@@ -14,8 +15,14 @@ has 'loaded' => (
     default => 0,
 );
 
+has 'bot' => (
+    is      => 'rw',
+    isa     => 'Bot::BasicBot',
+);
+
 sub init {
     my $self = shift;
+    $self->bot(shift);
 }
 
 sub load {
@@ -39,7 +46,10 @@ sub unload {
 sub said {
     my $self = shift;
     my $args = shift;
+
+    assert($self->loaded);
 }
+
 
 1;
 
