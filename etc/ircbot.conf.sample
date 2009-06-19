@@ -1,0 +1,18 @@
+# Bot::IRCBot configuration file. (YAML)
+
+# Server to connect to
+server:     irc.freenode.org
+port:       6667
+
+# Channels to join
+channels: [ #ircbot-default ]
+
+# Nicks to use
+nick:       Bot-IRCBot
+alt_nicks:  [ Bot-IRCBotA, Bot-IRCBotB, Bot-IRCBotC ]
+
+# Misc. stuff
+charset:    utf-8
+username:   Bot-IRCBot
+name:       Bot-IRCBot
+
