@@ -16,7 +16,6 @@ do {
 };
 
 has plugins => (
-    metaclass   => 'Collection::List',
     is          => 'rw',
     isa         => 'ArrayRef',
     default     => sub { [] },
@@ -25,14 +24,23 @@ has plugins => (
 sub init {
     my $self = shift;
 
-    foreach my $plugin (conf->{plugins}) {
-        use "Bot::IRCBot::Plugins::$plugin";
-        push $self->plugins, Bot::IRCBot::Plugins::$plugin->new();
+    my @plugins = ();
+
+    foreach my $plugin (@{conf->{plugins}}) {
+        Class::MOP::load_class("Bot::IRCBot::Modules::$plugin");
+        push @plugins, "Bot::IRCBot::Modules::$plugin"->new();
     }
 
-    foreach my $plugin ($self->plugins) {
-        $plugin->load;
+    $self->plugins(\@plugins);
+
+    use Data::Dumper;
+
+    foreach my $plugin (@{$self->plugins}) {
+        $plugin->init($self) or return 0;
+        $plugin->load() or return 0;
     }
+
+    return 1;
 }
 
 sub said {
@@ -40,7 +48,7 @@ sub said {
     my @output = ();
 
 
-    foreach my $plugin (conf->{plugins}) {
+    foreach my $plugin (@{$self->plugins}) {
         next unless $plugin->loaded;
 
         my $ret = $plugin->said(@_);

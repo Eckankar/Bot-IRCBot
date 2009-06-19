@@ -6,14 +6,14 @@ use Carp::Assert;
 extends 'Bot::IRCBot::Module';
 
 has 'name' => (
-    is      => 'r',
+    is      => 'ro',
     isa     => 'Str',
     default => 'YouTube Information',
 );
 
 sub said {
-    $self = shift;
-    $args = shift;
+    my $self = shift;
+    my $args = shift;
 
     my ($user, $body, $channel) =
             ($args->{who}, $args->{body}, $args->{channel});
@@ -27,5 +27,6 @@ sub said {
 
     return "Matched YouTube link; video id: $videoid"
 }
+
 1;
 

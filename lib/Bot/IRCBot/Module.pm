@@ -4,7 +4,7 @@ use Moose;
 use Carp::Assert;
 
 has 'name' => (
-    is      => 'r',
+    is      => 'ro',
     isa     => 'Str',
     default => 'Default Module Name (override this!)',
 );
