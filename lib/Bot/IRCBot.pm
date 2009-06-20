@@ -33,8 +33,6 @@ sub init {
 
     $self->plugins(\@plugins);
 
-    use Data::Dumper;
-
     foreach my $plugin (@{$self->plugins}) {
         $plugin->init($self) or return 0;
         $plugin->load() or return 0;
