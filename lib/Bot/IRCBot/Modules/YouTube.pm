@@ -27,7 +27,7 @@ sub said {
     assert($self->loaded);
 
     return undef
-        unless $body =~ /youtube\.\w{2,3}\S+v=([\w-]+)/;
+        unless $body =~ /youtube\.\w{2,3}\S+v=([\w-]+)/i;
 
     my $video_id = $1;
 
