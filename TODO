@@ -1,0 +1,14 @@
+Todo list for Bot-IRCBot:
+
+- Allow plugin-specific configuration to be loaded from ircbot.conf.
+- Dynamic reloading of bot.
+- The following plugins:
+  -- Already done in the Skype bot (http://code.google.com/p/dynamicskypebot):
+    - Dice roller
+    - Dictionary lookup
+    - Random 4chan picture
+    - High/low game
+    - Random porn link
+    - Quote database
+    - Urban Dictionary lookup
+    - Random WaffleImages link
