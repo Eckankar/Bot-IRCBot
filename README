@@ -1,3 +1,10 @@
-The purpose of this bot is as of yet undecided.
+A simple, modular, Perl-based IRC bot.
 
-Based off of http://github.com/sartak/Bot-Applebot.
+List of plugins:
+
+ -- YouTube --
+ Automatically gives info on YouTube links posted.
+
+ -- GoogleImages --
+ Responds to the command: !gis <query>
+ Performs a Google ImageSearch for the given query and returns a random result.
