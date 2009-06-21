@@ -1,7 +1,8 @@
+---
 # Bot::IRCBot configuration file. (YAML)
 
 # Server to connect to
-server:     irc.freenode.org
+server:     clarke.freenode.net
 port:       6667
 
 # Channels to join
@@ -9,10 +10,10 @@ channels: [ "#ircbot-default" ]
 
 # Nicks to use
 nick:       Bot-IRCBot
-alt_nicks:  [ "Bot-IRCBotA", "Bot-IRCBotB", "Bot-IRCBotC" ]
+alt_nicks:  [ Bot-IRCBotA, Bot-IRCBotB, Bot-IRCBotC ]
 
 # Loaded plugins
-plugins:    [ "YouTube", "GoogleImages" ]
+plugins: [ YouTube, GoogleImages, Lolcat ]
 
 # Misc. stuff
 charset:    utf-8
