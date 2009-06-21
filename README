@@ -8,3 +8,7 @@ List of plugins:
  -- GoogleImages --
  Responds to the command: !gis <query>
  Performs a Google ImageSearch for the given query and returns a random result.
+
+ -- Lolcat --
+ Responds to the command: !lolcat
+ Returns a link to a random lolcat in the chat.
