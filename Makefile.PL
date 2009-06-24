@@ -16,5 +16,9 @@ recommends 'LWP::Simple';
 # YouTube, among others
 recommends 'XML::Smart';
 
+# UrbanDictionary
+recommends 'WWW::Search';
+recommends 'WWW::Search::UrbanDictionary';
+
 WriteAll;
 
