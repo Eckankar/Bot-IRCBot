@@ -12,3 +12,7 @@ List of plugins:
  -- Lolcat --
  Responds to the command: !lolcat
  Returns a link to a random lolcat in the chat.
+
+ -- UrbanDictionary --
+ Responds to the command: !urbandictionary <query>
+ Looks up a word on UrbanDictionary.com and returns the first result.
