@@ -13,7 +13,7 @@ nick:       Bot-IRCBot
 alt_nicks:  [ Bot-IRCBotA, Bot-IRCBotB, Bot-IRCBotC ]
 
 # Loaded plugins
-plugins: [ YouTube, GoogleImages, Lolcat ]
+plugins: [ YouTube, GoogleImages, Lolcat, UrbanDictionary ]
 
 # Misc. stuff
 charset:    utf-8
